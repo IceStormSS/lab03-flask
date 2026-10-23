@@ -1,23 +1,25 @@
 {% extends "base.html" %}
-
-{% block title %}Про нас{% endblock %}
-
+{% block title %}Про нас - Теплий Сезон{% endblock %}
 {% block content %}
-<h1 class="text-3xl font-bold mb-4">Про нас</h1>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-    <div>
-        <p class="text-lg">
-            Ми - команда ентузіастів, які працюють над створенням інноваційних
-            рішень. Наша місія - зробити технології доступними та зрозумілими
-            для кожного.
-        </p>
+<h1 class="text-3xl font-bold mb-6">Про нас</h1>
+
+<section class="bg-white rounded-lg shadow p-6 mb-6">
+    <h2 class="text-xl font-bold mb-2 text-blue-500">Наша історія</h2>
+    <p class="text-gray-700">«Теплий Сезон» почався з невеликого магазину верхнього одягу. Ми хотіли, щоб якісна й тепла куртка була доступною кожному, і поступово виросли в онлайн-магазин з широким вибором моделей.</p>
+</section>
+
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="bg-white rounded-lg shadow p-6">
+        <h3 class="font-bold mb-2">Комфорт</h3>
+        <p class="text-gray-700">Одяг, у якому тепло й зручно в будь-яку погоду.</p>
     </div>
-    <div>
-        <img
-            src="https://picsum.photos/id/3/800/600"
-            alt="Ілюстративне фото"
-            class="w-full rounded-lg shadow-md"
-        />
+    <div class="bg-white rounded-lg shadow p-6">
+        <h3 class="font-bold mb-2">Чесна ціна</h3>
+        <p class="text-gray-700">Без прихованих націнок: ціна в каталозі є остаточною.</p>
     </div>
-</div>
+    <div class="bg-white rounded-lg shadow p-6">
+        <h3 class="font-bold mb-2">Турбота про клієнта</h3>
+        <p class="text-gray-700">Допомагаємо з розміром і швидко вирішуємо питання.</p>
+    </div>
+</section>
 {% endblock %}

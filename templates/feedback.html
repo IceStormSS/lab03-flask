@@ -1,10 +1,20 @@
 {% extends "base.html" %}
-{% block title %}Контакти{% endblock %}
+{% block title %}Контакти - Теплий Сезон{% endblock %}
 {% block content %}
 <h1 class="text-3xl font-bold mb-6">Контакти</h1>
-<div class="bg-white rounded-lg shadow p-6 max-w-xl">
-  <p><strong>Адреса:</strong> м. Львів, вул. Прикладна, 1</p>
-  <p><strong>Телефон:</strong> +380 00 000 00 00</p>
-  <p><strong>Години роботи:</strong> щодня 10:00-20:00</p>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="bg-white rounded-lg shadow p-6">
+        <h2 class="font-bold text-lg mb-3 text-blue-500">Зв'яжіться з нами</h2>
+        <p class="text-gray-700 mb-2"><strong>Адреса:</strong> м. Львів, вул. Прикладна, 10</p>
+        <p class="text-gray-700 mb-2"><strong>Телефон:</strong> +380 00 000 00 00</p>
+        <p class="text-gray-700"><strong>Email:</strong> info@teplyi-sezon.example</p>
+    </div>
+    <div class="bg-white rounded-lg shadow p-6">
+        <h2 class="font-bold text-lg mb-3 text-blue-500">Години роботи</h2>
+        <p class="text-gray-700 mb-2">Пн-Пт: 10:00 - 20:00</p>
+        <p class="text-gray-700 mb-2">Сб: 10:00 - 18:00</p>
+        <p class="text-gray-700">Нд: вихідний</p>
+    </div>
 </div>
 {% endblock %}
