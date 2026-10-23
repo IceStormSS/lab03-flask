@@ -1,23 +1,32 @@
 {% extends "base.html" %}
-
-{% block title %}Головна{% endblock %}
-
+{% block title %}Головна - Теплий Сезон{% endblock %}
 {% block content %}
-<h1 class="text-3xl font-bold mb-4">Ласкаво просимо на головну сторінку</h1>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-    <div>
-        <img
-            src="https://picsum.photos/id/180/800/600"
-            alt="Ілюстративне фото"
-            class="w-full rounded-lg shadow-md"
-        />
+<!-- Банер -->
+<section class="bg-blue-500 text-white rounded-lg p-8 md:p-12 text-center mb-8">
+    <h1 class="text-3xl md:text-5xl font-bold mb-4">Теплий Сезон</h1>
+    <p class="text-lg md:text-xl mb-6">Верхній одяг для будь-якої погоди: від легких вітровок до зимових пуховиків.</p>
+    <a href="{{ url_for('shop') }}" class="inline-block bg-white text-blue-500 font-bold py-2 px-6 rounded hover:bg-blue-100 transition-colors duration-300">Перейти до каталогу</a>
+</section>
+
+<!-- Про магазин -->
+<section class="mb-8">
+    <h2 class="text-2xl font-bold mb-3">Ласкаво просимо</h2>
+    <p class="text-gray-700">У «Теплому Сезоні» ви знайдете куртки, пальта, парки та жилети на кожен день. Ми добираємо моделі так, щоб вони були теплими, зручними та довговічними.</p>
+</section>
+
+<!-- Переваги -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="bg-white rounded-lg shadow p-6">
+        <h3 class="font-bold text-lg mb-2 text-blue-500">Якість</h3>
+        <p class="text-gray-700">Працюємо з перевіреними виробниками та якісними матеріалами.</p>
     </div>
-    <div>
-        <p class="text-lg">
-            Це приклад тексту для головної сторінки. Тут ви можете додати
-            інформацію про ваш проєкт, компанію або будь-який інший контент,
-            який ви хочете показати відвідувачам.
-        </p>
+    <div class="bg-white rounded-lg shadow p-6">
+        <h3 class="font-bold text-lg mb-2 text-blue-500">Швидка доставка</h3>
+        <p class="text-gray-700">Відправляємо замовлення по всій Україні протягом 1-2 днів.</p>
     </div>
-</div>
+    <div class="bg-white rounded-lg shadow p-6">
+        <h3 class="font-bold text-lg mb-2 text-blue-500">Обмін і повернення</h3>
+        <p class="text-gray-700">Не підійшов розмір? Обміняємо або повернемо кошти протягом 14 днів.</p>
+    </div>
+</section>
 {% endblock %}
