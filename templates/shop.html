@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Каталог - Теплий Сезон{% endblock %}
+{% block content %}
+<h1 class="text-3xl font-bold mb-2">Каталог верхнього одягу</h1>
+<p class="text-gray-600 mb-6">Усього товарів: {{ items|length }}</p>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+    {% for item in items %}
+    <div class="bg-white rounded-lg shadow hover:shadow-lg transition-shadow duration-300 overflow-hidden flex flex-col">
+        <div class="h-40 bg-blue-100 flex items-center justify-center text-blue-500 text-sm">
+            Фото товару
+        </div>
+        <div class="p-4 flex flex-col flex-grow">
+            <span class="text-xs text-blue-500 uppercase tracking-wide">{{ item.category }}</span>
+            <h2 class="font-semibold text-lg mt-1">{{ item.name }}</h2>
+            <p class="text-gray-700 mt-auto pt-3 font-bold">{{ item.price }} грн</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
